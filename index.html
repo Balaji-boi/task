@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     function validate(){
+        var name=document.getElementById(name).value;
+        var pass=myform.pass.value;
+        var cnfpass=myform.cnfpass.value;
+        console.log(name);
+
+        if (name!="")
+      {
+        
+        if(pass==cnfpass){
+            alert("Success")
+            return true;
+        }
+            else if(pass=""){
+                alert("enter pass")
+            
+        }
+        else{
+            alert("pass not same")
+        }
+       
+        }
+     }
+     
+
+     
+    </script>
+    <div class="myform">
+   <label>Name</label>
+   <input type="text" id="name"><br><br>
+   <label>pass</label>
+   <input type="text" id="pass"><br><br>
+   <label>confirm pass</label>
+   <input type="text" id="cnfpass">
+   <button onclick="validate">submit</button>
+   </div>
+   
+</body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <script>
+        function validate() {
+            // Fetch values from input fields
+            var name = document.getElementById("name").value.trim();
+            var pass = document.getElementById("pass").value;
+            var cnfpass = document.getElementById("cnfpass").value;
+
+            // Validation
+            // if (name === "") {
+            //     alert("Name cannot be empty");
+            //     return false;
+            // }
+
+            // if (pass === "") {
+            //     alert("Please enter a password");
+            //     return false;
+            // }
+
+            // if (pass !== cnfpass) {
+            //     alert("Passwords do not match");
+            //     return false;
+            // }
+
+            // alert("Validation successful!");
+            // return true;
+            if(name!=""){
+                if(pass==cnfpass)
+            {
+                alert("success")
+                return true;
+            }
+            else if(pass="" || cnfpass=""){
+                alert("enter pass ")
+                return false;
+            }
+            else{
+                alert("not same")
+                return false;
+            }
+            }
+            
+            else{
+                alert("enter name")
+                return false;
+            }
+        }
+    </script>
+
+    <div class="myform">
+        <label for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass"><br><br>
+
+        <label for="cnfpass">Confirm Password:</label>
+        <input type="password" id="cnfpass"><br><br>
+
+        <!-- Call validate function on button click -->
+        <button onclick="return validate()">Submit</button>
+    </div>
+</body>
+</html>
